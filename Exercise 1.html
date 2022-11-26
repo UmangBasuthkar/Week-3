@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Background change - Exercise 1</title>
+	<style type="text/css">
+		.container {
+			margin: auto;
+			width: 200px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<button id="btn">Click Me To Change The Background</button>
+	</div>
+	<script>
+		const button = document.getElementById("btn");
+		const body = document.body;
+		const colors = ['red', 'green', 'blue', 'yellow', 'purple', 'pink']
+
+		body.style.backgroundColor = colors[0]
+
+		button.addEventListener('click', changebgcolor)
+
+		function changebgcolor()
+		{
+			const color_index = Math.floor(Math.random() * colors.length)
+			body.style.backgroundColor = colors[color_index]
+		}
+	</script>
+</body>
+</html>
